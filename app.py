@@ -9,11 +9,6 @@ from werkzeug.security import generate_password_hash,check_password_hash
 def home():
 	return render_template('home.html')
 
-@app.route('/welcome')
-@login_required
-def welcome_user():
-	return render_template('welcome_user.html')
-
 @app.route('/logout')
 @login_required
 def logout():
@@ -38,7 +33,7 @@ def login():
 			next=request.args.get('next')
 
 			if next== None or not next[0]=='/':
-				next=url_for('welcome_user')
+				next=url_for('home')
 
 			return redirect(next)
 
