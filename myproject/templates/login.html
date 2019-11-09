@@ -1,24 +1,42 @@
 {%extends 'base.html'%}
 {%block content%}
 
-<div class="jumbotron">
+  <link rel="stylesheet" type="text/css" href="form.css">
 
-	<form method="post">
-		
-		{{form.hidden_tag()}}
-		<div>
-		{{form.email.label}} {{form.email()}}
-		</div>
-		<br>
-		<div>
-		{{form.password.label}} {{form.password()}}
-		</div>
-		<br>
-		<br><br>
-		{{form.submit(class="btn btn-primary")}}
 
-	</form>
+<div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex" style="width: 47%;
+  background: scroll right url('https://images.unsplash.com/photo-1554433607-66b5efe9d304?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80');
+  background-size: cover;">
+          
+          </div>
+          <div class="card-body">
+            <h4 class="card-title text-center">Login</h4>
+            <br><div style="font">
+            <form class="form-signin" method="post">
+            	{{form.hidden_tag()}}
+              
+              <div class="form-label-group">
+                {{form.email.label}} {{form.email(class="form-control")}}
+              </div>
+             
+              <br>
+              <div class="form-label-group">
+                {{form.password.label}} {{form.password(class="form-control")}}
+              </div>
+              <br><br>
+              
+              {{form.submit(class="btn btn-lg btn-success btn-block text-uppercase")}}
 
-</div>
+              
+            </form></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {%endblock%}
