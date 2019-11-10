@@ -56,5 +56,9 @@ def register():
 
 	return render_template('register.html',form=form)
 
+@app.route('/subs')
+def subs():
+	return render_template('subs.html')
+
 if __name__ == '__main__':
 	app.run(debug=True)
