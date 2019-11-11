@@ -16,7 +16,7 @@
     <style>
 
 body {
-  background: linear-gradient(to right, #000000, #007100);
+  background: linear-gradient(to right, #002200, #007100);
 }
 
       .bd-placeholder-img {
@@ -47,12 +47,12 @@ body {
       <li class="nav-item">
         <a class="nav-link" href="{{url_for('home')}}">Home</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('subs')}}">Sandwiches</a>
+      </li>
       {% if current_user.is_authenticated %}
       <li class="nav-item">
         <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="{{url_for('subs')}}">Sandwiches</a>
       </li>
       {% else %}
       <li class="nav-item">
@@ -60,9 +60,6 @@ body {
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{url_for('register')}}">Register</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="{{url_for('subs')}}">Sandwiches</a>
       </li>
       {% endif %}   
     </ul>
@@ -74,7 +71,7 @@ body {
 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
     <ul class="navbar-nav ml-auto">
        {% if current_user.is_authenticated %}
-        <span class="navbar-text text-right">
+        <span class="navbar-text text-right" style="color: white">
            Hello {{current_user.username}}!
         </span>
         {% endif %}
@@ -98,7 +95,7 @@ body {
 </div>
 
   <footer class="container">
-    <p style="color: white" class="text-center">&copy; 2019 Subway, Mumbai &middot; All rights reserved &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms & Conditions Applied</a></p>
+    <p style="color: white" class="text-center">&copy; 2019 <img src="https://www.stickpng.com/assets/images/5842f062a6515b1e0ad75b15.png" height="18" width="60"> &middot; Mumbai &middot; All rights reserved &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms & Conditions Applied</a></p>
     <p class="float-right" style="text-align: center;"><a href="#">Back to top</a></p>
   </footer>
 </main>

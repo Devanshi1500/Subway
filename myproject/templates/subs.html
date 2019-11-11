@@ -1,14 +1,17 @@
 {%extends 'base.html'%}
 {%block content%}
 
-<div class="jumbotron">
 	{%if current_user.is_authenticated%}
-	<h4>Hello {{current_user.username}}!</h4>
-	<h4>Choose between our wide variety of delicious subs!</h4>
-	{%else%}
-	<h4>Choose between our wide variety of delicious subs!</h4>
+	<h4 style="color: white; margin-left: 6%; margin-top: 2%">Hello {{current_user.username}}!</h4>
+  <h2 style="color: white; margin-left: 6%;">Choose between our wide variety of delicious subs!</h2>
+  {% else %}
+  <h2 style="color: white; margin-left: 6%; margin-top: 3%">Choose between our wide variety of delicious subs!</h2>
 	{% endif %}
+
+  
 </div>
+</div>
+<!--
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -51,65 +54,64 @@ a {
 <body>
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
 
-  <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
     <div class="w3-quarter">
       <img src="https://5.imimg.com/data5/YL/KQ/GLADMIN-33876378/veg-shammi-500x500.jpg" alt="Sandwich" style="width:100%">
-     <a class="w3-text-white"> <h3><u>Veg Shammie Kebab Sub(15cm,6 inch)</u></h3>
-      <p class="w3-text-white">A kebab speciality authentically made from lentils enriched with distinctive flavours of garlic and onion</p></a>
+     <a class="w3-text-white"> <h3><u></u></h3>
+      <p class="w3-text-white"></p></a>
       <button class="button button1">Add to Cart</button>
     </div>
     <div class="w3-quarter">
       <img src="https://www.momdeals.com/media/imager/201906/16254-posts.article_md.jpg" alt="Steak" style="width:100%">
-      <a class="w3-text-white"><h3><u>Chicken Teriyaki Sub(15cm,6 inch)</u></h3>
+      <a class="w3-text-white"><h3><u>Chicken Teriyaki Sub(6 inch)</u></h3>
       <p class="w3-text-white">This gourmet speciality is a flavourful blend of tender teriyaki glazed chicken strips served hot and toasted , on freshly baked bread</p></a>
        <button class="button button1">Add to Cart</button>
     </div>
     <div class="w3-quarter">
       <img src="https://5.imimg.com/data5/CN/UM/GLADMIN-33876378/corn-and-peas-500x500.jpg" alt="Cherries" style="width:100%">
-     <a class="w3-text-white"> <h3><u>Corn and Peas Sub(15cm,6 inch)</u></h3>
+     <a class="w3-text-white"> <h3><u>Corn and Peas Sub(6 inch)</u></h3>
       <p class="w3-text-white">A delicious assortment of peas,golden corns and crunchy dices of carrots,blended in a creamy mixture of eggless mayo sauce</p>
       </a>
        <button class="button button1">Add to Cart</button>
     </div>
     <div class="w3-quarter">
       <img src="https://5.imimg.com/data5/ID/TI/GLADMIN-48125880/chicken-tikka-500x500.png" alt="Pasta and Wine" style="width:100%">
-      <a class="w3-text-white"><h3><u>Chicken Tikka Sub(15cm,6 inch)</u></h3>
+      <a class="w3-text-white"><h3><u>Chicken Tikka Sub(6 inch)</u></h3>
       <p class="w3-text-white">Boneless chicken breast pieces marinated in tikka seasoning ,barbecued yet still delightfully succelent.</p></a>
        <button class="button button1">Add to Cart</button>
     </div>
   </div>
   
-  <!-- Second Photo Grid-->
+  
   <div class="w3-row-padding w3-padding-16 w3-center">
     <div class="w3-quarter">
       <img src="https://www.subway.com/ns/images/menu/IND/ENG/new%20menu-category-sandwich-Paneer%20Tikka-IN-234x140.jpg" alt="Popsicle" style="width:100%">
-      <a class="w3-text-white"><h3><u>Paneer Tikka Sub(15cm,6 inch)</u></h3>
+      <a class="w3-text-white"><h3><u>Paneer Tikka Sub(6 inch)</u></h3>
       <p class="w3-text-white">Cottage cheese slice marinated with barbecue seasoning and roasted to a light crispness.</p></a>
        <button class="button button1">Add to Cart</button>
     </div>
     <div class="w3-quarter">
       <img src="https://5.imimg.com/data5/JR/MA/GLADMIN-30222727/aloo-patty-500x500.jpg" alt="Salmon" style="width:100%">
-      <a class="w3-text-white"><h3><u>Aloo Pattie Sub(15cm,6 inch)</u></h3>
+      <a class="w3-text-white"><h3><u>Aloo Pattie Sub(6 inch)</u></h3>
       <p class="w3-text-white">The traditional aloo patty seasoned with special herbs and spices with your choice pf crisp fresh veggies on freshy baked bread .New bread featured-Flatbread</p></a>
        <button class="button button1">Add to Cart</button>
     </div>
     <div class="w3-quarter">
       <img src="https://5.imimg.com/data5/TH/BF/GLADMIN-35160300/chicken-slice-egg-and-cheese-sandwich-500x500.png" alt="Sandwich" style="width:100%">
-      <a class="w3-text-white"><h3><u>Cheese,Egg and Ham Sub(15cm,6 inch)</u></h3>
+      <a class="w3-text-white"><h3><u>Cheese,Egg and Ham Sub(6 inch)</u></h3>
       <p class="w3-text-white">Enjoy Chicken slice,melted cheese and egg on freshly baked bread.</p></a>
        <button class="button button1">Add to Cart</button>
     </div>
     <div class="w3-quarter">
       <img src="https://5.imimg.com/data5/RI/MQ/GLADMIN-29926477/turkey-500x500.jpg" alt="Croissant" style="width:100%">
-     <a class="w3-text-white"> <h3><u>Turkey and Ham Sub(15cm,6 inch)</u></h3>
+     <a class="w3-text-white"> <h3><u>Turkey and Ham Sub(6 inch)</u></h3>
       <p class="w3-text-white">Delicious sliced turkey breast and chicken slice with your choice of fresh vegetables served on freshly baked bread.</p></a>
        <button class="button button1">Add to Cart</button>
        p;
     </div>
   </div>
 
-  <!-- Pagination -->
+
   <div class="w3-center w3-padding-32">
     <div class="w3-bar">
       <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
@@ -120,6 +122,68 @@ a {
       <a href="#" class="w3-bar-item w3-button w3-hover-black">»Next</a>
     </div>
   </div>
-  
+  -->
+
+<div class="row">
+
+<div class="card col-sm-3" style="width: 18rem; margin-left: 6%; margin-right: 3%; margin-bottom: 3%; margin-top: 6%">
+  <img src="https://5.imimg.com/data5/YL/KQ/GLADMIN-33876378/veg-shammi-500x500.jpg" class="card-img-top" alt="..." height="171">
+  <div class="card-body">
+    <h5 class="card-title">Veg Shammie Kebab Sub (6 inch)</h5>
+    <p class="card-text">A kebab speciality made from lentils enriched with flavours of garlic and onion.</p>
+    <p style="text-align: center"><a href="#" class="btn btn-success">Add to Cart</a></p>
+  </div>
+</div>
+<div class="card col-sm-3" style="width: 18rem; margin: 3%; margin-bottom: 3%; margin-top: 6%">
+  <img src="https://www.momdeals.com/media/imager/201906/16254-posts.article_md.jpg" class="card-img-top" alt="..." height="171">
+  <div class="card-body">
+    <h5 class="card-title">Chicken Teriyaki Sub (6 inch)</h5>
+    <p class="card-text">A flavourful blend of tender teriyaki glazed chicken strips served hot and toasted.</p>
+    <p style="text-align: center"><a href="#" class="btn btn-success">Add to Cart</a></p>
+  </div>
+</div>
+<div class="card col-sm-3" style="width: 18rem; margin-right: 6%; margin-left: 3%; margin-bottom: 3%; margin-top: 6%">
+  <img src="https://5.imimg.com/data5/CN/UM/GLADMIN-33876378/corn-and-peas-500x500.jpg" class="card-img-top" alt="..." height="171">
+  <div class="card-body">
+    <h5 class="card-title">Corn and Peas Sub (6 inch)</h5>
+    <p class="card-text">An assortment of peas, corns and crunchy dices of carrots blended in a creamy mayo sauce.</p>
+    <p style="text-align: center"><a href="#" class="btn btn-success">Add to Cart</a></p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="row">
+
+<div class="card col-sm-3" style="width: 18rem; margin-left: 6%; margin-right: 3%; margin-bottom: 6%; margin-top: 3%">
+  <img src="https://www.subway.com/ns/images/menu/IND/ENG/new%20menu-category-sandwich-Paneer%20Tikka-IN-234x140.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Paneer Tikka Sub (6 inch)</h5>
+    <p class="card-text">Cottage cheese slice marinated with barbecue seasoning and roasted to a light crispness.</p>
+    <p style="text-align: center"><a href="#" class="btn btn-success">Add to Cart</a></p>
+  </div>
+</div>
+<div class="card col-sm-3" style="width: 18rem; margin: 3%; margin-bottom: 6%; margin-top: 3%">
+  <img src="https://5.imimg.com/data5/TH/BF/GLADMIN-35160300/chicken-slice-egg-and-cheese-sandwich-500x500.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Cheese, Egg and Ham Sub (6 inch)</h5>
+    <p class="card-text">Enjoy chicken slice, melted cheese and egg on freshly baked hand-crafted bread.</p>
+    <p style="text-align: center"><a href="#" class="btn btn-success">Add to Cart</a></p>
+  </div>
+</div>
+<div class="card col-sm-3" style="width: 18rem; margin-right: 6%; margin-left: 3%; margin-bottom: 6%; margin-top: 3%">
+  <img src="https://5.imimg.com/data5/RI/MQ/GLADMIN-29926477/turkey-500x500.jpg" class="card-img-top" alt="..." height="171">
+  <div class="card-body">
+    <h5 class="card-title">Turkey and Ham Sub (6 inch)</h5>
+    <p class="card-text">Delicious sliced turkey breast and chicken slice with your choice of fresh vegetables.</p>
+    <p style="text-align: center"><a href="#" class="btn btn-success">Add to Cart</a></p>
+  </div>
+</div>
+</div>
 
 {%endblock%}
